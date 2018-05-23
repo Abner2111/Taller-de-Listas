@@ -70,4 +70,3 @@ Prueba.appe(4)
 Prueba.appe(5)
 Prueba.appe(6)
 
-print(Prueba.toList())
