@@ -18,8 +18,13 @@ class ListaDoble:
             while tmp.next != None:
                 tmp = tmp.next
             tmp.next = Nodo(valor = dato)
+            self.tail = temp.next
             tmp.next.prev = tmp
-        
-            
-        
+
+    def reve(self):
+        nodo = self.tail
+        while nodo != None:
+            print(nodo.__str__())
+            nodo = nodo.prev
+    
         
