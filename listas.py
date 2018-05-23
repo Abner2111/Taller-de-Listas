@@ -18,22 +18,18 @@ class ListaDoble:
         self.largo = 0
 
     def appe(self, dato):
-        if isinstance(dato, int):
-            self.largo += 1
-            if self.head == None:
-                self.head = Nodo(valor = dato)
-            else:
-                tmp = self.head
-                while tmp.next != None:
-                    tmp = tmp.next
-                tmp.next = Nodo(valor = dato)
-                tmp.next.prev = tmp
-                self.tail = tmp.next
+        self.largo += 1
+        if self.head == None:
+           self.head = Nodo(valor = dato)
         else:
-            print("ERROR")
+            tmp = self.head
+            while tmp.next != None:
+                tmp = tmp.next
+            tmp.next = Nodo(valor = dato)
+            tmp.next.prev = tmp
+            self.tail = tmp.next
 
     def printL(self):
-
         nodo = self.head
         lista = "["
         while nodo != None:
