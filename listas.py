@@ -47,6 +47,15 @@ class ListaDoble:
         while nodo != None:
             print(nodo.__str__())
             nodo = nodo.prev
+            
+    def toList(self):
+        nodo = self.head
+        ListaN= []
+        while nodo != None:
+            add= nodo.get_valor()
+            ListaN.append(add)
+            nodo = nodo.next
+        return ListaN
 
 
 
@@ -57,3 +66,15 @@ l1.appe(14)
 l1.appe(15)
 
 l1.printL()
+
+Prueba = ListaDoble()
+Prueba.appe(1)
+Prueba.appe(2)
+Prueba.appe(3)
+Prueba.appe(4)
+Prueba.appe(5)
+Prueba.appe(6)
+
+Prueba.toList()
+
+print(Prueba.toList())
