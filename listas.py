@@ -13,5 +13,13 @@ class ListaDoble:
         self.largo += 1
         if self.head == None:
             self.head = Nodo(valor = dato)
+        else:
+            tmp = self.head
+            while tmp.next != None:
+                tmp = tmp.next
+            tmp.next = Nodo(valor = dato)
+            tmp.next.prev = tmp
+        
+            
         
         
