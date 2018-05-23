@@ -26,5 +26,7 @@ class ListaDoble:
         while nodo != None:
             print(nodo.__str__())
             nodo = nodo.prev
+            
+    def toList():
     
         
